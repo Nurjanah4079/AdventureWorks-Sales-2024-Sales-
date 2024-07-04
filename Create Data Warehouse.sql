@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database AdventureWorks2024DW ******/
+/****** Object:  Database [AWN_STG_Demo]  ******/
 CREATE DATABASE [AdventureWorks2024DW]
  
 GO
@@ -91,11 +91,11 @@ CREATE TABLE dbo.SalesOrder
 , version INT
 , date_from DATETIME
 , date_to DATETIME
-, SalesOrderNumber VARCHAR(20)
-, Channel VARCHAR(8)
 , SalesOrderLine VARCHAR(25)
+, Channel VARCHAR(8)
+, SalesOrderNumber VARCHAR(20)
 )
-;CREATE INDEX idx_SalesOrder_lookup ON dbo.SalesOrder(SalesOrderNumber)
+;CREATE INDEX idx_SalesOrder_lookup ON dbo.SalesOrder(SalesOrderLine)
 ;
 CREATE INDEX idx_SalesOrder_tk ON dbo.SalesOrder(SalesOrderLineKey)
 ;
